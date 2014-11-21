@@ -1,6 +1,6 @@
 Vitamio-with-librtmp <a href="http://www.butterflytv.net/"><img src="http://www.butterflytv.net/wp-content/uploads/2014/08/icon-butterflyTV-150x150.png" width="30"></a>
 ====================
-<a href="https://www.vitamio.org/en/">Vitamio player</a> compiled with librtmp.
+<a href="https://www.vitamio.org/en/">Vitamio player(Android media player)</a> compiled with librtmp.
 It is compatible with Red5 Media Server
 
 So that you can play rtmp stream in Android with this library.
