@@ -5,13 +5,29 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import io.vov.vitamio.widget.VideoView;
+
 
 public class MyActivity extends Activity {
+
+    private VideoView videoView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_my);
+
+        if (!io.vov.vitamio.LibsChecker.checkVitamioLibs(this))
+            return;
+
+        videoView = (VideoView) findViewById(R.id.vitamio_player);
+
+        // you may need to add " live=1" at the end of uri if it is live in red5 server
+        videoView.setVideoPath("rtmp://54.194.98.151/ButterFly_Red5/1416128155176.flv");
+
+        // also try -> rtmp://31.204.128.140/live/brlive_0028
+        // buffering may take some time
     }
 
 
